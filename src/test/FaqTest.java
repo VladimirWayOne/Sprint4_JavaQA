@@ -8,7 +8,6 @@ import pages.HomePage;
 @RunWith(Parameterized.class)
 public class FaqTest extends BaseTest{
     private final int questionNumber; // Поле с номером вопроса в разделе "Вопросы о важном"
-    private boolean actual; // Ожидаемый результат
 
     // Конструктор с параметрами
     public FaqTest (int questionField) {
@@ -39,7 +38,7 @@ public class FaqTest extends BaseTest{
         homePage.clickFaqQuestion(questionNumber); // Кликаем на вопрос
 
         // Проверяем, открылся ли текст
-        actual = homePage.getFaqAnswer(questionNumber);
+        boolean actual = homePage.faqAnswerIsDisplayed(questionNumber);
         Assert.assertTrue("Expect: price and payment text is displayed", actual);
     }
 }

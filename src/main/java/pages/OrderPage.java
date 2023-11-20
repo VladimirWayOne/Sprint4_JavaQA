@@ -10,6 +10,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class OrderPage extends BasePage {
+    public static final String ORDER_PAGE_URL = "https://qa-scooter.praktikum-services.ru/order";
     private final By FIRST_NAME_INPUT = By.xpath(".//input[contains(@placeholder,'Имя')]");
     private final By INCORRECT_FIRST_NAME_MESSAGE = By.xpath(".//input[contains(@placeholder,'Имя')]/parent::div/div");
     private final By LAST_NAME_INPUT = By.xpath(".//input[contains(@placeholder,'Фамилия')]");
