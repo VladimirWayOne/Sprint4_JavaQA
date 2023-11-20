@@ -6,14 +6,18 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-
+// Содержит локаторы и методы, доступные со всех страниц
 public class BasePage {
-    // Содержит локаторы и методы, доступные со всех страниц
+    // Основная страница самоката
     public final static String MAIN_PAGE_URL = "https://qa-scooter.praktikum-services.ru/";
     protected final WebDriver driver;
+    // Логотип-кнопка Яндекса
     private final static By YANDEX_LOGO_BUTTON  = By.cssSelector("a.Header_LogoYandex__3TSOI");;
+    // Логотип-кнопка Самоката
     private final static By SCOOTER_LOGO_BUTTON  = By.cssSelector(".Header_LogoScooter__3lsAR");
+    // Кнопка принять куки
     private final static By COOKIE_ACCEPT_BUTTON  = By.xpath(".//button[text()='да все привыкли']");
+    // Кнопка для ввода номера заказа для Статуса
     private final static By ORDER_STATUS_BUTTON  = By.xpath(".//button[text()='Статус заказа']");
 
     public BasePage(WebDriver driver){
